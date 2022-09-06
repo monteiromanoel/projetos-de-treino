@@ -43,56 +43,35 @@
         }
         #conteudo > p {
             background-color: red;
-        
-        }
-        .bt_home > a {
-            text-decoration: none;
-            color: black;
-        }
+        } 
         .bt_home_selected {
-            width: 115px;
-            height: 35px;
-            font-size: 12px;
             color: black;
-            background-color: rgba(247, 57, 57, 0.822);
+            background-color: red;
             color: white;
             box-shadow: none;
             font-weight: bold;
-            border-color: white;
-            margin-left: 40px;
-            margin-top: 20px;
-            border-style: hidden;
-            border-radius: 4px;
         }
-        .bt_home_selected > a {
-            text-decoration: none;
-            color: white;
-        }
-        
         
     </style>
 </head>
 <body>
-    <nav>
-        
-    </nav>
-    <div>
-        <p>
-            <label for="">Quilogramas</label>
-            <input type="number" placeholder="Quilogramas" id="kg" oninput="kgConvert(this.value)" onchange="kgConvert(this.value)">
-        </p>
-        <p>Pounds: <span id="pounds"></span></p>
-        <p>Ounces: <span id="ounces"></span></p>
-        <p>Gramas: <span id="grams"></span></p>
-        <p>Stones: <span id="stones"></span></p>
-    </div>
-
     <div class="div_button">
-        <button class="bt_home_selected"><a href="/teste2.html">HOME</a></button>
-        <button class="bt_home"><a href="/teste3.html">PG2</a></button>
-        <button class="bt_home"><a href="/teste4.html">PG3</a></button>
-        
+        <button class="bt_home_selected"><a href="/teste3.html">PG3</a></button>
+        <button class="bt_home"><a href="/teste4.html">PG4</a></button>
+        <button class="bt_home"><a href="testes2.html">BACK</a></button>
     </div>
+    
+ 
+<script>
 
+    
+    function pagina3() {
+        window.location.href = 'teste4.html'
+    }
+    function homePr() {
+        window.location.href = 'teste2.html'
+    }
+      
+</script>
 </body>
 </html>
