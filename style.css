@@ -80,7 +80,7 @@ main {
     display: block;
     width: 70px;
     height: 25px;
-    box-shadow: 2px 2px 0px rgb(8, 131, 231);
+    box-shadow: 2px 2px 0px rgb(0, 7, 14);
 }
 .texto2 {
     width: fit-content;
@@ -107,4 +107,20 @@ main {
     margin: 0px 7px 0px 300px;
     background-color: white;
     border: 1px solid black;
+}
+button > a {
+    font-style: none;
+    text-decoration: none;
+    color: black;
+}
+button:hover, button > a:hover {
+    background-color: rgb(245, 76, 76);
+    color: white;
+    box-shadow: none;
+}
+.bg-button > button > a {
+    text-decoration: none;
+}
+button {
+    cursor: pointer;
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
 </head>
 <body>
     <main>
@@ -13,7 +14,7 @@
             <h1>CALCULADORA AMERICANA</h1>
         </div>
         <div class="bg-button">
-            <button>HOME</button>
+            <button><a href="pro">HOME</a></button>
             <button>PÁGINA 1</button>
             <button>PÁGINA 2</button>
             <button>PÁGINA 3</button>
@@ -24,8 +25,8 @@
             </p>
         </div>
         <div class="div-calc">
-            
-            <input type="number" id="pol1" title="Polegadas (Inch)"> <span>&rarr;</span><p id="answer-space1"></p>
+            <label for="pol1">Polegadas (Inch)</label> <br>
+            <input type="number" id="pol1" title="Polegadas (Inch)" placeholder="Polegadas (Inch)" oninput="convertInc(this.value)" onchange="convertInc(this.value)"> <span>&rarr;</span><p>Centímetros: <span id="answer-space1"></span></p>
             
         </div>
     </main>
