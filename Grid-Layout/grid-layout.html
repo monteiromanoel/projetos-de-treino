@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            background: #f89d91;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: 20vh 70vh 10vh;
+            grid-template-areas:    "h h"
+                                    "m a"  
+                                    "f f";
+                                    /*Usa-se as configurações dos itens aqui dentro, não necessitando configurar dentro deles. Os nomes, nesse caso h, m, a, f, poderiam ser qualquer um, mencionados posteriormente nos itens na tag grid-area*/
+        }
+        header {
+            background: yellow;
+            grid-area: h;
+            /*
+            grid-column-start: 1; - Config Normal
+            grid-column-end: 3; - Config Normal
+            grid-column: 1/3; - Shorthand Start / End
+            */
+
+        }
+        main {
+            background: blue;
+            grid-area: m;
+        }
+        aside {
+            background: green;
+            grid-area: a;
+        }
+        footer {
+            background: white;
+            grid-area: f;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header></header>
+        <main></main>
+        <aside></aside>
+        <footer></footer>
+    </div>
+</body>
+</html>

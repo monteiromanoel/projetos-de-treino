@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 100px;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: lightgray;
+            width: 100vh;
+            height: 100vh;
+        }
+        .main-content {
+            background-color: white;
+            width: 70vh;
+            height: 80vh;
+            margin: auto;
+            border-radius: 15px;
+        }
+        .main-content > h1 {
+            text-align: center;
+            margin: auto;
+            padding: 20px;
+            font-size: 2.7em;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 2fr 5fr;
+            grid-template-rows: 10vh 55vh;
+            grid-template-areas: "h h" "a m";
+            grid-gap: 5px;
+            padding: 10px;
+        }
+        .container > header {
+            background-color: lightblue;
+            grid-area: h;
+        }
+        .container > header > h2 {
+            text-align: center;
+            padding-top: 10px;
+            width: auto;
+            height: auto;
+        }
+        .container > aside {
+            background: blue;
+            grid-area: a;
+            border-radius: 15px;
+            padding: 10px;
+            
+        }
+        .container > main {
+            background: red;
+            grid-area: m;
+            padding: 10px;
+        }
+        .div-bt {
+            
+        }
+        .bt-home {
+            margin: 15px;
+            padding: auto;
+            border: none;
+            width: 10em;
+            height: 3em;
+            font-size: 15px;
+            color: white;
+            background-color: coral;
+            font-weight: bold;
+            box-shadow: 2px 2px 0px black;
+            cursor: pointer;
+        }
+        .bt-home:hover {
+            background-color: aqua;
+            color: black;
+            font-weight: bold;
+            box-shadow: none;
+        }
+        input {
+            border: none;
+            border-radius: 2px;
+        }
+        .container-interno {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            grid-template-rows: 20vw;
+            grid-template-areas: "in se sp";
+        }
+        .container-interno > .number1 {
+            grid-area: in;
+        }
+        .container-interno > .divtst2{
+            grid-area: se;
+            width: 20px;
+            height: 15px;
+        }
+    
+        .container-interno > .divtst3 {
+            grid-area: sp;
+        }
+    </style>
+</head>
+<body>
+    <main class="main-content">
+        <h1>Teste de Grid</h1>
+        <section class="container">
+            <header>
+                <h2>TESTE 1</h2>
+            </header>
+            <aside>
+                <div class="div-bt">
+                    <button class="bt-home">HOME</button>
+                </div>                
+            </aside>
+            <main>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem enim ratione aliquid? Neque, perspiciatis! Dolorem unde deleniti officiis sapiente odio quaerat, vel quis delectus optio natus, tenetur dolore minus asperiores?
+                </p>
+                <div class="container-interno">
+                    <div class="divtst1">
+                        <input type="number" placeholder="Número 1" id="number1"> 
+                    </div>
+                    
+                    <div class="divtst3">
+                        <input type="text" class="answer"></input>
+                    </div>
+                    
+
+                </div>
+            </main>
+        </section>
+    </main>
+</body>
+</html>
