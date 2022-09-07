@@ -59,8 +59,6 @@ main {
 }
 .div-button > button:hover{
     box-shadow: none;
-    width: 75px;
-    height: 39px;
     transition-duration: 500ms;
 }
 .bg-button {
@@ -104,7 +102,7 @@ main {
 #answer-space1 {
     width: 150px;
     height: 20px;
-    margin: 0px 7px 0px 300px;
+    margin: 0px 7px 0px 7px;
     background-color: white;
     border: 1px solid black;
 }
@@ -123,4 +121,18 @@ button:hover, button > a:hover {
 }
 button {
     cursor: pointer;
+}
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+.grid-item {
+    border: none;
+    margin: 5px;
+}
+.grid-item > .answer-space {
+    border: 1px solid rgba(0, 0, 0, 0.288);
+    border-radius: 3px;
+    
 }
