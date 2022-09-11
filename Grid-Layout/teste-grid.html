@@ -11,12 +11,13 @@
             margin: 0;
             box-sizing: border-box;
             background-color: lightgray;
-            width: 100vh;
+            width: 70vw;
             height: 100vh;
         }
         .main-content {
+            display: block;
             background-color: white;
-            width: 70vh;
+            min-width: 70vh;
             height: 80vh;
             margin: auto;
             border-radius: 15px;
@@ -26,18 +27,21 @@
             margin: auto;
             padding: 20px;
             font-size: 2.7em;
+            min-width: 69vh;
         }
         .container {
             display: grid;
-            grid-template-columns: 2fr 5fr;
+            grid-template-columns: 1fr 6fr;
             grid-template-rows: 10vh 55vh;
             grid-template-areas: "h h" "a m";
             grid-gap: 5px;
             padding: 10px;
+            min-width: 69vw;
         }
         .container > header {
             background-color: lightblue;
             grid-area: h;
+            max-width: 58.5vw;
         }
         .container > header > h2 {
             text-align: center;
@@ -50,6 +54,7 @@
             grid-area: a;
             border-radius: 15px;
             padding: 10px;
+            max-width: 11em;
             
         }
         .container > main {
@@ -58,7 +63,7 @@
             padding: 10px;
         }
         .div-bt {
-            
+            max-width: 120px;
         }
         .bt-home {
             margin: 15px;
@@ -79,25 +84,27 @@
             font-weight: bold;
             box-shadow: none;
         }
-        input {
+        ul {
             border: none;
-            border-radius: 2px;
+            border-radius: 0px;
+            background-color: white;
+            width: 150px;
+            height: 20px;
+            margin: auto;
+            text-align:  end;
         }
         .container-interno {
             display: grid;
             grid-template-columns: 2fr 3fr;
-            grid-template-rows: 20vw;
+            grid-template-rows: 3vw;
             grid-template-areas: "in se sp";
+            grid-gap: 10px;
+            align-content: center;
+            
         }
         .container-interno > .number1 {
             grid-area: in;
         }
-        .container-interno > .divtst2{
-            grid-area: se;
-            width: 20px;
-            height: 15px;
-        }
-    
         .container-interno > .divtst3 {
             grid-area: sp;
         }
@@ -121,17 +128,33 @@
                 </p>
                 <div class="container-interno">
                     <div class="divtst1">
-                        <input type="number" placeholder="Número 1" id="number1"> 
+                        <input type="number" placeholder="Polegadas (Inches)" title="Polegadas (Inches)" id="number1" oninput = "convertInc(this.value)" onchange="convertInc(this.value)"> 
                     </div>
-                    
+                    <div style="font-size: 30px; text-align: center; grid-area: se; margin-bottom: 10px; justify-self: center;">
+                        &rarr;
+                    </div>
                     <div class="divtst3">
-                        <input type="text" class="answer"></input>
+                        <ul type="text" class="answer" id="answer" title="Centímetros"></ul>
                     </div>
-                    
-
+                    <div class="container-interno">
+                        <div class="divtst1">
+                            <input type="number" placeholder="Polegadas (Inches)" title="Polegadas (Inches)" id="number1" oninput = "convertInc(this.value)" onchange="convertInc(this.value)"> 
+                        </div>
+                        <div style="font-size: 30px; text-align: center; grid-area: se; margin-bottom: 10px; justify-self: center;">
+                            &rarr;
+                        </div>
+                        <div class="divtst3">
+                            <ul type="text" class="answer" id="answer" title="Centímetros"></ul>
+                        </div>
+                    </div>
                 </div>
             </main>
         </section>
     </main>
 </body>
+<script>
+    function convertInc(value) {
+        document.getElementById("answer").innerHTML = value * 2.54
+    }
+</script>
 </html>
